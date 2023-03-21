@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contenido_cambia %}
+
+<h1>No se encuentra contenido disponible</h1>
+    {% if usuarios %}
+        {% for usuario in usuarios %}
+            <p>nombre: {{usuario.nombre}}</p>
+            <p>apellido: {{usuario.apellido}}</p>
+        {% endfor %}
+    {% else %}
+    <h1>No hay usuarios en el momento</h1>
+    {% endif %}
+    
+{% endblock %}

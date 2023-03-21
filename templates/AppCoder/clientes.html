@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contenido_cambia %}
+
+<h1>No se encuentra contenido disponible</h1>
+    {% if clientes %}
+        {% for cliente in clientes %}
+            <p>nombre: {{cliente.nombre}}</p>
+            <p>apellido: {{cliente.apellido}}</p>
+        {% endfor %}
+    {% else %}
+    <h1>No hay clientes en el momento</h1>
+    {% endif %}
+    
+{% endblock %}

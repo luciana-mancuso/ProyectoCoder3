@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contenido_cambia %}
+
+<h1>No se encuentra contenido disponible</h1>
+    {% if productos %}
+        {% for producto in productos %}
+            <p>producto: {{producto.nombre}}</p>
+            <p>precio: {{producto.precio}}</p>
+        {% endfor %}
+    {% else %}
+    <h1>No hay productos en el momento</h1>
+    {% endif %}
+
+{% endblock %}

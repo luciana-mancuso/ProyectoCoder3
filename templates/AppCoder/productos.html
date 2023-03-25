@@ -2,7 +2,13 @@
 
 {% block contenido_cambia %}
 
-<h1>No se encuentra contenido disponible</h1>
+    <form action="{% url 'AppCoderProductos' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Enviar">
+    </form>
+
+
     {% if productos %}
         {% for producto in productos %}
             <p>producto: {{producto.nombre}}</p>
